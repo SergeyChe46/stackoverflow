@@ -1,0 +1,25 @@
+.main {
+    display: grid;
+    grid-template-rows: 2fr 10fr;
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 2fr 10fr;
+}
+
+.show-user {
+    display: grid;
+    justify-content: stretch;
+    grid-template-rows: repeat(auto-fill, minmax(100px, 0.5fr));
+}
+
+.show-user div {
+    margin: 1px;
+    background-color: yellowgreen;
+}
