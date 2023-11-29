@@ -1,8 +1,9 @@
 <div class="card-header">
-    <div>
+    <div routerLink="post/{{post.id}}">
         {{post.title || 'Загрузка'}}
     </div>
-    <div class="reactions">
+    <div *ngIf="post.reactions"
+         class="reactions">
         {{post.reactions || 'Загрузка'}}
     </div>
 </div>

@@ -1,34 +1,18 @@
 .main {
     display: grid;
     grid-template-rows: 50px auto;
-    }
-    
-    .menu {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        font-size: x-large;
 }
-
+.menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: x-large;
+}
 .navbar {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
-
 .content {
     display: grid;
     grid-template-columns: 2fr 10fr;
 }
 
-.show-user {
-    display: grid;
-    row-gap: 5px;
-    justify-content: stretch;
-    grid-template-rows: repeat(auto-fill, minmax(100px, 0.5fr));
-}
-
-.show-user .post-card {
-    display: grid;
-    border: 2px solid black;
-    height: 10vh;
-    overflow: hidden;
-}

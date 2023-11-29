@@ -4,10 +4,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { PostComponent } from './component/post/post.component';
+import { PostDetailComponent } from './component/post-detail/post-detail.component';
+import { PostItemComponent } from './component/post-item/post-item.component';
+import { PostListComponent } from './component/post-list/post-list.component';
 
 @NgModule({
-  declarations: [AppComponent, PostComponent],
+  declarations: [
+    AppComponent,
+    PostItemComponent,
+    PostDetailComponent,
+    PostListComponent,
+  ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],

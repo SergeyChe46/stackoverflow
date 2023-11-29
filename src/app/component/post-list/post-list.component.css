@@ -1,0 +1,13 @@
+.show-user {
+    display: grid;
+    row-gap: 5px;
+    justify-content: stretch;
+    grid-template-rows: repeat(auto-fill, minmax(100px, 0.5fr));
+}
+
+.show-user .post-card {
+    display: grid;
+    border: 2px solid black;
+    height: 10vh;
+    overflow: hidden;
+}
