@@ -1,0 +1,21 @@
+.card-header {
+    font-size: x-large;
+    display: flex;
+    justify-content: space-around;
+}
+
+.tags {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    background: rgb(255, 100, 6);
+}
+
+.tag {
+    cursor: pointer;
+    box-sizing: border-box;
+    border: 1px solid black;
+    margin: 0.5vw;
+    padding: 0.5vw;
+    background: red;
+}

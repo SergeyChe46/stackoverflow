@@ -1,8 +1,13 @@
 <div class="main">
 
   <div class="navbar">
-    <div class="menu"
-         *ngFor="let menu of menuItem">{{menu}}
+    <div class="menu">
+      <div>
+        <a routerLink="/">Главная</a>
+      </div>
+      <div>
+        <a routerLink="/">Контакты</a>
+      </div>
     </div>
   </div>
 
@@ -13,28 +18,12 @@
       </div>
     </div>
     <div class="show-user">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-      <div>4</div>
-    </div>
-  </div>
+      <div *ngFor="let post of posts"
+           class="post-card">
+      
+        <app-post [post]="post"></app-post>
 
+      </div>
+      </div>
+      </div>
 </div>
-<!--
-<div class="navbar">
-  <div class="menu"
-       *ngFor="let menu of menuItem">{{menu}}
-  </div>
-</div>
-<div class="left-bar">
-  <div class="left-menu"
-       *ngFor="let menu of menuItem">{{menu}}
-  </div>
-</div>
-<div class="content">
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>
-  <div>4</div>
-</div> -->

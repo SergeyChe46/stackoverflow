@@ -1,0 +1,13 @@
+<div class="card-header">
+    <div>
+        {{post.title || 'Загрузка'}}
+    </div>
+    <div class="reactions">
+        {{post.reactions || 'Загрузка'}}
+    </div>
+</div>
+<div class="tags"
+     *ngIf="post.tags">
+    <span *ngFor="let tag of post.tags"
+          class="tag">{{tag}}</span>
+</div>
