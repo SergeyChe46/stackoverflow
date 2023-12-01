@@ -30,7 +30,6 @@ export class AppComponent implements OnInit {
 
   onSubmit() {
     let postTitle = this.postTitle.value;
-    console.log(postTitle);
 
     this.postService.addPost(postTitle).subscribe({
       error: (error) => console.log(error),

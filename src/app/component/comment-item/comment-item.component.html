@@ -1,4 +1,5 @@
 <div class="post">
     <p class="comment_body">{{comment.body}}</p>
-    <a class="user_link">{{comment.user.username}}</a>
+    <a routerLink="/user/{{comment.user.id}}/posts"
+       class="user_link">{{comment.user.username}}</a>
 </div>

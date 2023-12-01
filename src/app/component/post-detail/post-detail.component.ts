@@ -28,8 +28,6 @@ export class PostDetailComponent implements OnInit {
     this.postService.getById(postId).subscribe({
       next: (postResult: Post) => {
         this.post = postResult;
-        console.log(this.post);
-
         this.getPostComment(postId);
       },
       error: (error) => {
@@ -42,7 +40,6 @@ export class PostDetailComponent implements OnInit {
     this.postService.getPostComments(postId).subscribe({
       next: (result: any) => {
         this.postComments = result['comments'];
-        console.log(this.postComments);
       },
       error: (error) => console.log(error),
     });
