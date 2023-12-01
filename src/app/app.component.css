@@ -16,3 +16,30 @@
     grid-template-columns: 2fr 10fr;
 }
 
+/* Modal */
+#toggle {
+    visibility: hidden;
+    opacity: 0;
+    z-index: -1;
+}
+
+#toggle:checked~dialog {
+    display: block;
+}
+
+label {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+dialog {
+    animation: appear 350ms ease-in 1;
+    max-width: 500px;
+}

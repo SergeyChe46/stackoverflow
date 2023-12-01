@@ -35,5 +35,11 @@ export class PostsService implements IPostRepository {
     );
   }
 
+  addPost(title: string): Observable<Post> {
+    return this.httpClient.post<Post>(`${this.MAIN_URL}/add/`, {
+      title: title,
+    });
+  }
+
   private MAIN_URL: string = 'https://dummyjson.com/posts';
 }

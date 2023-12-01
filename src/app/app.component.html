@@ -6,7 +6,20 @@
         <a routerLink="/">Главная</a>
       </div>
       <div>
-        <a routerLink="/">Контакты</a>
+        <!-- Модальное окно добавления поста -->
+        <input type="checkbox"
+               id="toggle">
+        <label for="toggle">Добавить пост</label>
+        <dialog>
+          <form [formGroup]="postForm">
+            <label for="title">Заголовок</label>
+            <input type="textarea"
+                   formControlName="title">
+          </form>
+          <button (click)="onSubmit()">Добавить</button>
+          <label for="toggle">close overlay</label>
+        </dialog>
+
       </div>
     </div>
   </div>
