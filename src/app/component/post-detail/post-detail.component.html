@@ -14,7 +14,6 @@
 </main>
 
 <h2>Comments</h2>
-<div *ngFor="let post of postComments">
-    <p>{{post.body}}</p>
-    <a>{{post.user.username}}</a>
+<div *ngFor="let comment of postComments">
+    <app-comment-item [comment]="comment"></app-comment-item>
 </div>
