@@ -1,1 +1,20 @@
-{{post|json}}
+<main>
+    <div class="header">
+        <h1>Post</h1>
+        <span class="reactions">{{post.reactions}}</span>
+    </div>
+    <div>
+        <span *ngFor="let tag of post.tags"
+              class="tag">
+            {{tag}}
+        </span>
+    </div>
+    <h2 class="post_title">{{post.title}}</h2>
+    <p class="post_body">{{post.body}}</p>
+</main>
+
+<h2>Comments</h2>
+<div *ngFor="let post of postComments">
+    <p>{{post.body}}</p>
+    <a>{{post.user.username}}</a>
+</div>

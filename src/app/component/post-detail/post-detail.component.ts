@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { PostsService } from 'src/app/helpers/services/posts.service';
+import { PostComment } from 'src/app/model/comment.interface';
 import { Post } from 'src/app/model/post.interface';
 
 @Component({
@@ -14,7 +15,8 @@ export class PostDetailComponent implements OnInit {
     private route: ActivatedRoute
   ) {}
 
-  post!: Post;
+  post: Post = {} as Post;
+  postComments?: PostComment[] = [];
   postId: number = 0;
 
   ngOnInit(): void {
@@ -26,10 +28,23 @@ export class PostDetailComponent implements OnInit {
     this.postService.getById(postId).subscribe({
       next: (postResult: Post) => {
         this.post = postResult;
+        console.log(this.post);
+
+        this.getPostComment(postId);
       },
       error: (error) => {
         console.log(error);
       },
+    });
+  }
+
+  private getPostComment(postId: number) {
+    this.postService.getPostComments(postId).subscribe({
+      next: (result: any) => {
+        this.postComments = result['comments'];
+        console.log(this.postComments);
+      },
+      error: (error) => console.log(error),
     });
   }
 }

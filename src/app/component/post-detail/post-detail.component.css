@@ -1,0 +1,27 @@
+main {
+    display: grid;
+    grid-template-rows: auto;
+}
+
+h1 {
+    display: inline;
+}
+
+.tag {
+    margin-top: 2vh;
+    margin-left: 1vw;
+    background-color: blueviolet;
+}
+
+.reactions {
+    margin-left: 3vw;
+}
+
+.post_title {
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+}
+
+.post_body {
+    margin-top: 1vh;
+}
